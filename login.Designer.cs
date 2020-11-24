@@ -1,7 +1,7 @@
 ﻿
 namespace AppDev_CW_dNF
 {
-    partial class Form1
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,15 @@ namespace AppDev_CW_dNF
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 479);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Login";
             this.ResumeLayout(false);
 
         }
