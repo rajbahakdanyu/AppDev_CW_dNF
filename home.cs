@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppDev_CW_dNF
 {
-    public partial class login : Form
+    public partial class mainFrame : Form
     {
-        public login()
+        public mainFrame()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace AppDev_CW_dNF
 {
-    partial class login
+    partial class reviewFrame
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,13 @@ namespace AppDev_CW_dNF
         {
             this.SuspendLayout();
             // 
-            // login
+            // reviewFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 479);
-            this.MaximizeBox = false;
-            this.Name = "login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "reviewFrame";
+            this.Text = "Review Form";
             this.ResumeLayout(false);
 
         }
@@ -47,4 +45,3 @@ namespace AppDev_CW_dNF
         #endregion
     }
 }
-
