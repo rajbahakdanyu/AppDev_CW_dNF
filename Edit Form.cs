@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppDev_CW_dNF
 {
-    public partial class Review : Form
+    public partial class Edit_Form : Form
     {
-        public Review()
+        public Edit_Form()
         {
             InitializeComponent();
         }

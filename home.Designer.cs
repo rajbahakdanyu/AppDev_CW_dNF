@@ -29,83 +29,102 @@ namespace AppDev_CW_dNF
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnModify = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainFrame));
+            this.panelSidebar = new System.Windows.Forms.Panel();
             this.btnImport = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnGenerate = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnshow = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.lbWelcome = new System.Windows.Forms.Label();
+            this.panelSidebar.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnNew
+            // panelSidebar
             // 
-            this.btnNew.Location = new System.Drawing.Point(40, 30);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(124, 64);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "New Review";
-            this.btnNew.UseVisualStyleBackColor = true;
-            // 
-            // btnModify
-            // 
-            this.btnModify.Location = new System.Drawing.Point(250, 30);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(124, 64);
-            this.btnModify.TabIndex = 1;
-            this.btnModify.Text = "Modify Form";
-            this.btnModify.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.panelSidebar, "panelSidebar");
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.panelSidebar.Controls.Add(this.btnImport);
+            this.panelSidebar.Controls.Add(this.btnEdit);
+            this.panelSidebar.Controls.Add(this.btnshow);
+            this.panelSidebar.Controls.Add(this.panelLogo);
+            this.panelSidebar.Name = "panelSidebar";
             // 
             // btnImport
             // 
-            this.btnImport.Location = new System.Drawing.Point(40, 144);
+            resources.ApplyResources(this.btnImport, "btnImport");
+            this.btnImport.FlatAppearance.BorderSize = 0;
+            this.btnImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnImport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(124, 64);
-            this.btnImport.TabIndex = 2;
-            this.btnImport.Text = "Import Reviews";
             this.btnImport.UseVisualStyleBackColor = true;
             // 
-            // btnExport
+            // btnEdit
             // 
-            this.btnExport.Location = new System.Drawing.Point(250, 144);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(124, 64);
-            this.btnExport.TabIndex = 3;
-            this.btnExport.Text = "Export Review";
-            this.btnExport.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnEdit, "btnEdit");
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnGenerate
+            // btnshow
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(40, 255);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(124, 64);
-            this.btnGenerate.TabIndex = 4;
-            this.btnGenerate.Text = "Generate Chart";
-            this.btnGenerate.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnshow, "btnshow");
+            this.btnshow.FlatAppearance.BorderSize = 0;
+            this.btnshow.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnshow.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnshow.Name = "btnshow";
+            this.btnshow.UseVisualStyleBackColor = true;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            // 
+            // panelLogo
+            // 
+            resources.ApplyResources(this.panelLogo, "panelLogo");
+            this.panelLogo.Name = "panelLogo";
+            // 
+            // panelMain
+            // 
+            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
+            this.panelMain.Controls.Add(this.lbWelcome);
+            resources.ApplyResources(this.panelMain, "panelMain");
+            this.panelMain.Name = "panelMain";
+            // 
+            // lbWelcome
+            // 
+            this.lbWelcome.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            resources.ApplyResources(this.lbWelcome, "lbWelcome");
+            this.lbWelcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbWelcome.Name = "lbWelcome";
             // 
             // mainFrame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 372);
-            this.Controls.Add(this.btnGenerate);
-            this.Controls.Add(this.btnExport);
-            this.Controls.Add(this.btnImport);
-            this.Controls.Add(this.btnModify);
-            this.Controls.Add(this.btnNew);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelSidebar);
             this.MaximizeBox = false;
             this.Name = "mainFrame";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Customer Review";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.panelSidebar.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnNew;
-        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.Panel panelSidebar;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnshow;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnGenerate;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Label lbWelcome;
     }
 }
 

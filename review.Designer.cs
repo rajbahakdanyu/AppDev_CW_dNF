@@ -1,7 +1,7 @@
 ﻿
 namespace AppDev_CW_dNF
 {
-    partial class reviewFrame
+    partial class Review
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,35 @@ namespace AppDev_CW_dNF
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // reviewFrame
+            // btnBack
+            // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.Location = new System.Drawing.Point(353, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(115, 40);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // Review
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "reviewFrame";
-            this.Text = "Review Form";
+            this.ClientSize = new System.Drawing.Size(493, 489);
+            this.Controls.Add(this.btnBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Review";
+            this.Text = "Review";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnBack;
     }
 }

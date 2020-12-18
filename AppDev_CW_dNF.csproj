@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="review.cs">
+    <Compile Include="Edit Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="review.Designer.cs">
-      <DependentUpon>review.cs</DependentUpon>
+    <Compile Include="Edit Form.Designer.cs">
+      <DependentUpon>Edit Form.cs</DependentUpon>
     </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
@@ -61,8 +61,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="review.resx">
-      <DependentUpon>review.cs</DependentUpon>
+    <Compile Include="Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Edit Form.resx">
+      <DependentUpon>Edit Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
@@ -76,6 +82,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
