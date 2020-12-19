@@ -30,25 +30,40 @@ namespace AppDev_CW_dNF
         private void InitializeComponent()
         {
             this.reviewFields = new System.Windows.Forms.DataGridView();
+            this.fieldName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtAdd = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.reviewFields)).BeginInit();
             this.SuspendLayout();
             // 
             // reviewFields
             // 
+            this.reviewFields.AllowUserToAddRows = false;
+            this.reviewFields.AllowUserToDeleteRows = false;
             this.reviewFields.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reviewFields.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.reviewFields.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fieldName});
             this.reviewFields.Location = new System.Drawing.Point(27, 65);
             this.reviewFields.Name = "reviewFields";
+            this.reviewFields.ReadOnly = true;
             this.reviewFields.RowHeadersWidth = 51;
             this.reviewFields.RowTemplate.Height = 24;
             this.reviewFields.Size = new System.Drawing.Size(437, 333);
             this.reviewFields.TabIndex = 0;
+            // 
+            // fieldName
+            // 
+            this.fieldName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fieldName.HeaderText = "Field Name";
+            this.fieldName.MinimumWidth = 6;
+            this.fieldName.Name = "fieldName";
+            this.fieldName.ReadOnly = true;
             // 
             // btnRemove
             // 
@@ -59,6 +74,7 @@ namespace AppDev_CW_dNF
             this.btnRemove.TabIndex = 1;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
@@ -69,6 +85,7 @@ namespace AppDev_CW_dNF
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtAdd
             // 
@@ -90,11 +107,22 @@ namespace AppDev_CW_dNF
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(27, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(115, 40);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save Changes";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // Edit_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 489);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtAdd);
             this.Controls.Add(this.btnAdd);
@@ -116,5 +144,7 @@ namespace AppDev_CW_dNF
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtAdd;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fieldName;
+        private System.Windows.Forms.Button btnSave;
     }
 }
