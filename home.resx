@@ -199,7 +199,7 @@
     <value>1</value>
   </data>
   <data name="btnshow.Text" xml:space="preserve">
-    <value>Show Review</value>
+    <value>Show Score</value>
   </data>
   <data name="&gt;&gt;btnshow.Name" xml:space="preserve">
     <value>btnshow</value>
@@ -212,6 +212,18 @@
   </data>
   <data name="&gt;&gt;btnshow.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.Name" xml:space="preserve">
+    <value>labelPanel</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.Parent" xml:space="preserve">
+    <value>panelLogo</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="panelLogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -261,42 +273,6 @@
   <data name="&gt;&gt;panelSidebar.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;lbWelcome.Name" xml:space="preserve">
-    <value>lbWelcome</value>
-  </data>
-  <data name="&gt;&gt;lbWelcome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbWelcome.Parent" xml:space="preserve">
-    <value>panelMain</value>
-  </data>
-  <data name="&gt;&gt;lbWelcome.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>220, 0</value>
-  </data>
-  <data name="panelMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>493, 489</value>
-  </data>
-  <data name="panelMain.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panelMain.Name" xml:space="preserve">
-    <value>panelMain</value>
-  </data>
-  <data name="&gt;&gt;panelMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="lbWelcome.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -307,7 +283,7 @@
     <value>Microsoft Sans Serif, 18pt, style=Bold</value>
   </data>
   <data name="lbWelcome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 203</value>
+    <value>224, 203</value>
   </data>
   <data name="lbWelcome.Size" type="System.Drawing.Size, System.Drawing">
     <value>253, 36</value>
@@ -330,6 +306,63 @@
   <data name="&gt;&gt;lbWelcome.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="panelMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 0</value>
+  </data>
+  <data name="panelMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>705, 489</value>
+  </data>
+  <data name="panelMain.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelMain.Name" xml:space="preserve">
+    <value>panelMain</value>
+  </data>
+  <data name="&gt;&gt;panelMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="labelPanel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPanel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 16.2pt</value>
+  </data>
+  <data name="labelPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 32</value>
+  </data>
+  <data name="labelPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 32</value>
+  </data>
+  <data name="labelPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelPanel.Text" xml:space="preserve">
+    <value>Admin Panel</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.Name" xml:space="preserve">
+    <value>labelPanel</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.Parent" xml:space="preserve">
+    <value>panelLogo</value>
+  </data>
+  <data name="&gt;&gt;labelPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -337,7 +370,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>713, 489</value>
+    <value>925, 489</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

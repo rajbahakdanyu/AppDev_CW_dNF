@@ -54,7 +54,7 @@ namespace AppDev_CW_dNF
             this.reviewFields.ReadOnly = true;
             this.reviewFields.RowHeadersWidth = 51;
             this.reviewFields.RowTemplate.Height = 24;
-            this.reviewFields.Size = new System.Drawing.Size(437, 333);
+            this.reviewFields.Size = new System.Drawing.Size(649, 333);
             this.reviewFields.TabIndex = 0;
             // 
             // fieldName
@@ -68,7 +68,7 @@ namespace AppDev_CW_dNF
             // btnRemove
             // 
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemove.Location = new System.Drawing.Point(349, 417);
+            this.btnRemove.Location = new System.Drawing.Point(561, 417);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(115, 40);
             this.btnRemove.TabIndex = 1;
@@ -79,7 +79,7 @@ namespace AppDev_CW_dNF
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAdd.Location = new System.Drawing.Point(229, 417);
+            this.btnAdd.Location = new System.Drawing.Point(414, 417);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(115, 40);
             this.btnAdd.TabIndex = 2;
@@ -92,14 +92,14 @@ namespace AppDev_CW_dNF
             this.txtAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtAdd.Location = new System.Drawing.Point(27, 426);
             this.txtAdd.Name = "txtAdd";
-            this.txtAdd.Size = new System.Drawing.Size(182, 22);
+            this.txtAdd.Size = new System.Drawing.Size(285, 22);
             this.txtAdd.TabIndex = 3;
             this.txtAdd.Text = "Enter Field\'s to add";
             // 
             // btnBack
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.Location = new System.Drawing.Point(349, 12);
+            this.btnBack.Location = new System.Drawing.Point(561, 12);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(115, 40);
             this.btnBack.TabIndex = 4;
@@ -121,7 +121,7 @@ namespace AppDev_CW_dNF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 489);
+            this.ClientSize = new System.Drawing.Size(705, 489);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtAdd);

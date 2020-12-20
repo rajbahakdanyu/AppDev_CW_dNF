@@ -37,7 +37,7 @@ namespace AppDev_CW_dNF
             string[] values = line.Split(','); // Split data
 
             // Displaying each field name in dataGridView
-            foreach (var value in values)
+            foreach (string value in values)
             {
                 reviewFields.Rows.Add(new object[] { value });
             }

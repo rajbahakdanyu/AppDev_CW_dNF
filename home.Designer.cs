@@ -37,7 +37,9 @@ namespace AppDev_CW_dNF
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
+            this.labelPanel = new System.Windows.Forms.Label();
             this.panelSidebar.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +84,7 @@ namespace AppDev_CW_dNF
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.labelPanel);
             resources.ApplyResources(this.panelLogo, "panelLogo");
             this.panelLogo.Name = "panelLogo";
             // 
@@ -99,6 +102,12 @@ namespace AppDev_CW_dNF
             this.lbWelcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbWelcome.Name = "lbWelcome";
             // 
+            // labelPanel
+            // 
+            resources.ApplyResources(this.labelPanel, "labelPanel");
+            this.labelPanel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelPanel.Name = "labelPanel";
+            // 
             // mainFrame
             // 
             resources.ApplyResources(this, "$this");
@@ -110,6 +119,8 @@ namespace AppDev_CW_dNF
             this.Name = "mainFrame";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.panelSidebar.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.panelMain.ResumeLayout(false);
             this.panelMain.PerformLayout();
             this.ResumeLayout(false);
@@ -125,6 +136,7 @@ namespace AppDev_CW_dNF
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lbWelcome;
+        private System.Windows.Forms.Label labelPanel;
     }
 }
 
