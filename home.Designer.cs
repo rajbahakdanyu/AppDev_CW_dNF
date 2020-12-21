@@ -35,9 +35,10 @@ namespace AppDev_CW_dNF
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnshow = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.labelPanel = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
-            this.labelPanel = new System.Windows.Forms.Label();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelMain.SuspendLayout();
@@ -47,6 +48,7 @@ namespace AppDev_CW_dNF
             // 
             resources.ApplyResources(this.panelSidebar, "panelSidebar");
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
+            this.panelSidebar.Controls.Add(this.btnLogOut);
             this.panelSidebar.Controls.Add(this.btnImport);
             this.panelSidebar.Controls.Add(this.btnEdit);
             this.panelSidebar.Controls.Add(this.btnshow);
@@ -88,6 +90,12 @@ namespace AppDev_CW_dNF
             resources.ApplyResources(this.panelLogo, "panelLogo");
             this.panelLogo.Name = "panelLogo";
             // 
+            // labelPanel
+            // 
+            resources.ApplyResources(this.labelPanel, "labelPanel");
+            this.labelPanel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelPanel.Name = "labelPanel";
+            // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(19)))), ((int)(((byte)(54)))));
@@ -102,11 +110,15 @@ namespace AppDev_CW_dNF
             this.lbWelcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbWelcome.Name = "lbWelcome";
             // 
-            // labelPanel
+            // btnLogOut
             // 
-            resources.ApplyResources(this.labelPanel, "labelPanel");
-            this.labelPanel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelPanel.Name = "labelPanel";
+            resources.ApplyResources(this.btnLogOut, "btnLogOut");
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // mainFrame
             // 
@@ -137,6 +149,7 @@ namespace AppDev_CW_dNF
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lbWelcome;
         private System.Windows.Forms.Label labelPanel;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
 

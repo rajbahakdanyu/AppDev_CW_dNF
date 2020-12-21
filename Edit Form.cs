@@ -20,7 +20,7 @@ namespace AppDev_CW_dNF
             loadData();
         }
 
-        // Go back to the landing panel
+        // Go back to the home panel
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();

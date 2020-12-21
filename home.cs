@@ -41,5 +41,13 @@ namespace AppDev_CW_dNF
         {
             openChildForm(new Review());
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Landing form = new Landing();
+            form.Show();
+            form.FormClosing += (obj, args) => { this.Close(); };
+            this.Hide();
+        }
     }
 }
