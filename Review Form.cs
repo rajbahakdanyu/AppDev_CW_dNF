@@ -15,6 +15,8 @@ namespace AppDev_CW_dNF
     {
         int textBox = 1;
         int score = 1;
+        List<TextBox> textBoxList = new List<TextBox>();
+        List<ComboBox> comboBoxList = new List<ComboBox>();
 
         public Review_Form()
         {
@@ -31,10 +33,12 @@ namespace AppDev_CW_dNF
             string line = File.ReadAllText(filePath); // Read all data from file into a single string            
             string[] values = line.Split(','); // Split data
 
+            // Dynamiclly creating textBoxes
             createTextBox("Customer Name"); 
             createTextBox("Customer Number");
             createTextBox("Customer Email");
 
+            // Dynamiclly creating comboBoxes
             foreach (string value in values)
             {
                 createReviewField(value);
@@ -61,6 +65,7 @@ namespace AppDev_CW_dNF
             panelForm.Controls.Add(Mytextbox);
 
             textBox++;
+            textBoxList.Add(Mytextbox); // Saving textBox references
         }
 
         private void createReviewField(string title)
@@ -75,7 +80,7 @@ namespace AppDev_CW_dNF
 
             // Creating ComboBox
             ComboBox MyComboBox = new ComboBox();
-            MyComboBox.Name = "txt" + score;
+            MyComboBox.Name = "combo" + score;
             MyComboBox.Top = textBox * 40;
             MyComboBox.Left = 120;
             MyComboBox.Width = 180;
@@ -89,6 +94,7 @@ namespace AppDev_CW_dNF
 
             textBox++; 
             score++;
+            comboBoxList.Add(MyComboBox); // Saving comboBox references
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -98,7 +104,67 @@ namespace AppDev_CW_dNF
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Review saved successfully.", "Success");
+            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
+            string reviewPath = projectDirectory + @"\AppDev_CW_dNF\reviews.csv"; // Get the full file path
+
+            List<string> data = new List<string>();
+            bool err = false;
+
+            // Getting data from textBox
+            foreach (TextBox textBox in textBoxList)
+            {
+                data.Add(textBox.Text);
+            }
+
+            // Getting data from comboBox
+            foreach (ComboBox comboBox in comboBoxList)
+            {
+                if (comboBox.Text.Equals(""))
+                {
+                    err = true;
+                }
+                data.Add(comboBox.Text);
+            }
+
+            if (err)
+            {
+                MessageBox.Show("Please score all criteria", "Error");
+            } else
+            {
+                // Writing to reviews.csv
+                using (StreamWriter w = File.AppendText(reviewPath))
+                {
+                    w.Write("\n");
+                    for (int i = 0; i < data.Count; i++)
+                    {
+                        if (i != data.Count - 1)
+                        {
+                            w.Write(data[i] + ",");
+                        }
+                        else
+                        {
+                            w.Write(data[i]);
+                        }
+                    }
+                }
+                MessageBox.Show("Review Added successfully.", "Success");
+                clearForm();
+            }
+
+        }
+
+        private void clearForm()
+        {
+            foreach (TextBox textBox in textBoxList)
+            {
+                textBox.Text = String.Empty;
+            }
+
+            foreach (ComboBox comboBox in comboBoxList)
+            {
+                comboBox.SelectedIndex = -1;
+            }
         }
     }
 }

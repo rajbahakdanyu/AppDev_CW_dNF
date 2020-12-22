@@ -47,11 +47,16 @@ namespace AppDev_CW_dNF
             List<string> xValues = new List<string>();
             List<double> yValues = new List<double>();
 
-            
+            // Add data to chart
+            xValues.Add("Food Quality");
+            yValues.Add(5);
+            xValues.Add("Service");
+            yValues.Add(3);
+            xValues.Add("Value for Money");
+            yValues.Add(3.5);
 
             reviewChart.Series["Average Score"].Points.DataBindXY(xValues, yValues);
 
-            reviewChart.Titles.Add("Review Score Average Chart");
         }   
     }
 }

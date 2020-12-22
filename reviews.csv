@@ -1,3 +1,5 @@
 ﻿Customer Name,Contact Number,Email,Food Quality,Staff Friendliness,Cleanliness,Order Accuracy,Resturant Ambiance,Value for Money
-John Doe,9801234567,doe@gmail.com,5,3,2,2,5,3
-Ram Bahadur,9876543210,ram@gmail.com,2,4,4,2,2,5
+name,number,email,1,2,3,4,5,1
+name,number,email,1,2,3,4,5,1
+name,number,email,1,2,4,5,3,1
+name,number,email,1,2,3,4,5,1
