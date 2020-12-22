@@ -156,34 +156,34 @@
   <data name="&gt;&gt;btnLogOut.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="btnImport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="btnSee.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="btnImport.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnSee.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnImport.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnSee.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 270</value>
   </data>
-  <data name="btnImport.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnSee.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 85</value>
   </data>
-  <data name="btnImport.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnSee.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="btnImport.Text" xml:space="preserve">
-    <value>Import Review</value>
+  <data name="btnSee.Text" xml:space="preserve">
+    <value>See Reviews</value>
   </data>
-  <data name="&gt;&gt;btnImport.Name" xml:space="preserve">
-    <value>btnImport</value>
+  <data name="&gt;&gt;btnSee.Name" xml:space="preserve">
+    <value>btnSee</value>
   </data>
-  <data name="&gt;&gt;btnImport.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnSee.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnImport.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnSee.Parent" xml:space="preserve">
     <value>panelSidebar</value>
   </data>
-  <data name="&gt;&gt;btnImport.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnSee.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnEdit.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">

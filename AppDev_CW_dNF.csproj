@@ -79,6 +79,12 @@
     <Compile Include="Review.Designer.cs">
       <DependentUpon>Review.cs</DependentUpon>
     </Compile>
+    <Compile Include="See Reviews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="See Reviews.Designer.cs">
+      <DependentUpon>See Reviews.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Edit Form.resx">
       <DependentUpon>Edit Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Review.resx">
       <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="See Reviews.resx">
+      <DependentUpon>See Reviews.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

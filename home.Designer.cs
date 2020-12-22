@@ -31,14 +31,14 @@ namespace AppDev_CW_dNF
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainFrame));
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.btnImport = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnSee = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnshow = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.labelPanel = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.lbWelcome = new System.Windows.Forms.Label();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.panelSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelMain.SuspendLayout();
@@ -49,20 +49,31 @@ namespace AppDev_CW_dNF
             resources.ApplyResources(this.panelSidebar, "panelSidebar");
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.panelSidebar.Controls.Add(this.btnLogOut);
-            this.panelSidebar.Controls.Add(this.btnImport);
+            this.panelSidebar.Controls.Add(this.btnSee);
             this.panelSidebar.Controls.Add(this.btnEdit);
             this.panelSidebar.Controls.Add(this.btnshow);
             this.panelSidebar.Controls.Add(this.panelLogo);
             this.panelSidebar.Name = "panelSidebar";
             // 
-            // btnImport
+            // btnLogOut
             // 
-            resources.ApplyResources(this.btnImport, "btnImport");
-            this.btnImport.FlatAppearance.BorderSize = 0;
-            this.btnImport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnImport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImport.Name = "btnImport";
-            this.btnImport.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnLogOut, "btnLogOut");
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnSee
+            // 
+            resources.ApplyResources(this.btnSee, "btnSee");
+            this.btnSee.FlatAppearance.BorderSize = 0;
+            this.btnSee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSee.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSee.Name = "btnSee";
+            this.btnSee.UseVisualStyleBackColor = true;
+            this.btnSee.Click += new System.EventHandler(this.btnSee_Click);
             // 
             // btnEdit
             // 
@@ -110,16 +121,6 @@ namespace AppDev_CW_dNF
             this.lbWelcome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbWelcome.Name = "lbWelcome";
             // 
-            // btnLogOut
-            // 
-            resources.ApplyResources(this.btnLogOut, "btnLogOut");
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLogOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
             // mainFrame
             // 
             resources.ApplyResources(this, "$this");
@@ -144,7 +145,7 @@ namespace AppDev_CW_dNF
         private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnshow;
-        private System.Windows.Forms.Button btnImport;
+        private System.Windows.Forms.Button btnSee;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label lbWelcome;

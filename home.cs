@@ -49,5 +49,10 @@ namespace AppDev_CW_dNF
             form.FormClosing += (obj, args) => { this.Close(); };
             this.Hide();
         }
+
+        private void btnSee_Click(object sender, EventArgs e)
+        {
+            openChildForm(new See_Reviews());
+        }
     }
 }
