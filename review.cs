@@ -38,25 +38,45 @@ namespace AppDev_CW_dNF
             // Get data from fields.txt
             string fields = File.ReadAllText(fieldPath);
             string[] field = fields.Split(',');
+            int totalFields = 0;
 
             // Get data from reviews.csv
             string[] reviews = File.ReadAllLines(reviewPath);
-            string[] review = new string[reviews.Length];
 
             // X and Y values of chart
             List<string> xValues = new List<string>();
             List<double> yValues = new List<double>();
 
-            // Add data to chart
-            xValues.Add("Food Quality");
-            yValues.Add(5);
-            xValues.Add("Service");
-            yValues.Add(3);
-            xValues.Add("Value for Money");
-            yValues.Add(3.5);
+            // Saving field names for chart
+            foreach (string head in field)
+            {
+                totalFields++; // Calculating total number of fields
+                xValues.Add(head);
+            }
 
+            int totalReviews = reviews.Length;
+            double[] totalScore = new double[totalFields];
+
+            for (int j = 1; j < totalReviews; j++) // Looping through all reviews (rows)
+            {
+                string[] review = reviews[j].Split(',');
+                int count = 0;
+
+                for (int i = 3; i < review.Length; i++) // Looping through all fields (columns)
+                {
+                    totalScore[count] += Convert.ToDouble(review[i]); // Storing total score in each field
+                    count++;
+                }
+            }
+            
+            // Calculating average score of each field
+            foreach (double avg in totalScore)
+            {
+                yValues.Add(avg / (totalReviews-1));
+            }
+
+            // Plotting in graph
             reviewChart.Series["Average Score"].Points.DataBindXY(xValues, yValues);
-
         }   
     }
 }

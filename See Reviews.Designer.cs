@@ -57,6 +57,7 @@ namespace AppDev_CW_dNF
             this.btnImport.TabIndex = 2;
             this.btnImport.Text = "Import Reviews";
             this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // viewAll
             // 
