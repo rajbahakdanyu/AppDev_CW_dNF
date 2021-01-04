@@ -129,7 +129,7 @@ namespace AppDev_CW_dNF
             string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
             string sourcePath = projectDirectory + @"\AppDev_CW_dNF"; // Get the full file path
 
-            string now = DateTime.Now.ToString("s"); // Getting current date and time
+            string now = DateTime.Now.ToString("dd-mm-yyyy_HH-mm-ss"); // Getting current date and time
             string destinationPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Get path of documents folder
 
             string sourceName = "reviews.csv";
