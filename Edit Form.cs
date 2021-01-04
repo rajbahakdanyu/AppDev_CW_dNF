@@ -130,7 +130,7 @@ namespace AppDev_CW_dNF
             string sourcePath = projectDirectory + @"\AppDev_CW_dNF"; // Get the full file path
 
             string now = DateTime.Now.ToString("s"); // Getting current date and time
-            string destinationPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string destinationPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Get path of documents folder
 
             string sourceName = "reviews.csv";
             string destinationName = "reviews_" + now + ".csv";
@@ -141,10 +141,17 @@ namespace AppDev_CW_dNF
             File.Copy(sourceFile, destinationFile, true);
         }
 
-        // Change Review Criterias
+        // Apply review criteria changes to reviews.csv
         private void change_Fields()
         {
+            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
+            string reviewPath = projectDirectory + @"\AppDev_CW_dNF\reviews.csv"; // Get the full file path
+            string fieldsPath = projectDirectory + @"\AppDev_CW_dNF\fields.txt";
 
+            string line = "Customer Name,Contact Number,Email," + File.ReadAllText(fieldsPath);
+
+            File.WriteAllText(reviewPath, line);
         }
     }
 }
