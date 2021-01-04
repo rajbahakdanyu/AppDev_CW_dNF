@@ -38,8 +38,10 @@ namespace AppDev_CW_dNF
             createTextBox("Customer Number");
             createTextBox("Customer Email");
 
+            string[] items = sorting(values);
+
             // Dynamiclly creating comboBoxes
-            foreach (string value in values)
+            foreach (string value in items)
             {
                 createReviewField(value);
             }
@@ -165,6 +167,28 @@ namespace AppDev_CW_dNF
             {
                 comboBox.SelectedIndex = -1;
             }
+        }
+
+        // Bubble sort 
+        private string[] sorting(string[] values)
+        {
+            int l = values.Length;
+            string temp;
+
+            for (int i = 0; i < l; i++)
+            {
+                for (int j = 0; j < l - 1; j++)
+                {
+                    if (values[j].CompareTo(values[j + 1]) > 0)
+                    {
+                        temp = values[j];
+                        values[j] = values[j + 1];
+                        values[j + 1] = temp;
+                    }
+                }
+            }
+
+            return values;
         }
     }
 }

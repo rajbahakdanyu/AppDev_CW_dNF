@@ -53,7 +53,8 @@ namespace AppDev_CW_dNF
         // Add new field name into dataGridView
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string newField = txtAdd.Text; // Get new field name
+            TextInfo cultInfo = new CultureInfo("en-US", false).TextInfo;  // Creates a TextInfo based on the "en-US" culture.
+            string newField = cultInfo.ToTitleCase(txtAdd.Text.ToLower()); // Get new field name
 
             if (newField.Length == 0) // Check if field name is empty
             {
@@ -114,8 +115,36 @@ namespace AppDev_CW_dNF
                 count += 1;
             }
             writer.Close();
+
+            export_Reviews();
+            change_Fields();
            
             MessageBox.Show("Changes saved successfully.", "Success");
+        }
+
+        // Export Reviews
+        private void export_Reviews()
+        {
+            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
+            string sourcePath = projectDirectory + @"\AppDev_CW_dNF"; // Get the full file path
+
+            string now = DateTime.Now.ToString("s"); // Getting current date and time
+            string destinationPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            string sourceName = "reviews.csv";
+            string destinationName = "reviews_" + now + ".csv";
+
+            string sourceFile = Path.Combine(sourcePath, sourceName); // Path of source file
+            string destinationFile = Path.Combine(destinationPath, destinationName); // Path of destination file
+
+            File.Copy(sourceFile, destinationFile, true);
+        }
+
+        // Change Review Criterias
+        private void change_Fields()
+        {
+
         }
     }
 }
