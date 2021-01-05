@@ -13,6 +13,8 @@ namespace AppDev_CW_dNF
 {
     public partial class See_Reviews : Form
     {
+        Utils util = new Utils();
+
         public See_Reviews()
         {
             InitializeComponent();
@@ -22,9 +24,7 @@ namespace AppDev_CW_dNF
         // Initializing data into dataGridView
         private void loadData()
         {
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string reviewPath = projectDirectory + @"\AppDev_CW_dNF\reviews.csv"; // Get the full file path
+            string reviewPath = util.getReviewsPath(); // Get the full file path
 
             string[] lines = File.ReadAllLines(reviewPath); // Getting data from reviews.csv
 
@@ -87,9 +87,7 @@ namespace AppDev_CW_dNF
                 }
             }
 
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string reviewPath = projectDirectory + @"\AppDev_CW_dNF\reviews.csv"; // Get the full file path
+            string reviewPath = util.getReviewsPath(); // Get the full file path
 
             string[] reviews = File.ReadAllLines(reviewPath);
             string[] reviewField = reviews[0].Split(',');

@@ -85,6 +85,7 @@
     <Compile Include="See Reviews.Designer.cs">
       <DependentUpon>See Reviews.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Edit Form.resx">
       <DependentUpon>Edit Form.cs</DependentUpon>
     </EmbeddedResource>

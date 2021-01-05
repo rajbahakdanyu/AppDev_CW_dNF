@@ -13,8 +13,11 @@ namespace AppDev_CW_dNF
 {
     public partial class Review_Form : Form
     {
+        Utils util = new Utils();
+
         int textBox = 1;
         int score = 1;
+
         List<TextBox> textBoxList = new List<TextBox>();
         List<ComboBox> comboBoxList = new List<ComboBox>();
 
@@ -26,9 +29,7 @@ namespace AppDev_CW_dNF
 
         private void loadForm()
         {
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string filePath = projectDirectory + @"\AppDev_CW_dNF\fields.txt"; // Get the full file path
+            string filePath = util.getFieldsPath(); 
 
             string line = File.ReadAllText(filePath); // Read all data from file into a single string            
             string[] values = line.Split(','); // Split data
@@ -38,7 +39,7 @@ namespace AppDev_CW_dNF
             createTextBox("Customer Number");
             createTextBox("Customer Email");
 
-            string[] items = sorting(values);
+            string[] items = util.sorting(values);
 
             // Dynamiclly creating comboBoxes
             foreach (string value in items)
@@ -106,9 +107,7 @@ namespace AppDev_CW_dNF
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string reviewPath = projectDirectory + @"\AppDev_CW_dNF\reviews.csv"; // Get the full file path
+            string reviewPath = util.getReviewsPath(); 
 
             List<string> data = new List<string>();
             bool err = false;
@@ -167,28 +166,6 @@ namespace AppDev_CW_dNF
             {
                 comboBox.SelectedIndex = -1;
             }
-        }
-
-        // Bubble sort 
-        private string[] sorting(string[] values)
-        {
-            int l = values.Length;
-            string temp;
-
-            for (int i = 0; i < l; i++)
-            {
-                for (int j = 0; j < l - 1; j++)
-                {
-                    if (values[j].CompareTo(values[j + 1]) > 0)
-                    {
-                        temp = values[j];
-                        values[j] = values[j + 1];
-                        values[j + 1] = temp;
-                    }
-                }
-            }
-
-            return values;
         }
     }
 }

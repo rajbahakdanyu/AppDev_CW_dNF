@@ -14,6 +14,8 @@ namespace AppDev_CW_dNF
 {
     public partial class Edit_Form : Form
     {
+        Utils util = new Utils();
+
         public Edit_Form()
         {
             InitializeComponent();
@@ -29,9 +31,7 @@ namespace AppDev_CW_dNF
         // Initializing data into dataGridView
         private void  loadData()
         {
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string filePath = projectDirectory + @"\AppDev_CW_dNF\fields.txt"; // Get the full file path
+            string filePath = util.getFieldsPath(); 
 
             string line = File.ReadAllText(filePath); // Read all data from file into a single string            
             string[] values = line.Split(','); // Split data
@@ -89,9 +89,7 @@ namespace AppDev_CW_dNF
         // Save changes to file
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string filePath = projectDirectory + @"\AppDev_CW_dNF\fields.txt"; // Get the full file path
+            string filePath = util.getFieldsPath(); 
 
             string current;
             string field;
@@ -144,10 +142,8 @@ namespace AppDev_CW_dNF
         // Apply review criteria changes to reviews.csv
         private void change_Fields()
         {
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string reviewPath = projectDirectory + @"\AppDev_CW_dNF\reviews.csv"; // Get the full file path
-            string fieldsPath = projectDirectory + @"\AppDev_CW_dNF\fields.txt";
+            string reviewPath = util.getReviewsPath(); 
+            string fieldsPath = util.getFieldsPath();
 
             string line = "Customer Name,Contact Number,Email," + File.ReadAllText(fieldsPath);
 

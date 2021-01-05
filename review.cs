@@ -14,6 +14,8 @@ namespace AppDev_CW_dNF
 {
     public partial class Review : Form
     {
+        Utils util = new Utils();
+
         public Review()
         {
             InitializeComponent();
@@ -27,13 +29,9 @@ namespace AppDev_CW_dNF
 
         private void loadDataChart()
         {
-            string workingDirectory = Environment.CurrentDirectory; // Get the current WORKING directory
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName; // Get the current PROJECT directory
-            string filePath = projectDirectory + @"\AppDev_CW_dNF\"; // Get the full file path
-
             // Get path of both files
-            string reviewPath = filePath + "reviews.csv";
-            string fieldPath = filePath + "fields.txt";
+            string reviewPath = util.getReviewsPath();
+            string fieldPath = util.getFieldsPath();
 
             // Get data from fields.txt
             string fields = File.ReadAllText(fieldPath);

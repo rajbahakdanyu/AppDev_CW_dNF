@@ -18,16 +18,21 @@ namespace AppDev_CW_dNF
         }
 
         private Form activeForm = null; // Setting current form
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
                 activeForm.Close();
+
             activeForm = childForm;
+
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
+
             panelContent.Controls.Add(childForm);
             panelContent.Tag = childForm;
+
             childForm.BringToFront();
             childForm.Show();
         }
