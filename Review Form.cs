@@ -88,11 +88,11 @@ namespace AppDev_CW_dNF
             MyComboBox.Left = 120;
             MyComboBox.Width = 180;
             MyComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            MyComboBox.Items.Add("1");
-            MyComboBox.Items.Add("2");
-            MyComboBox.Items.Add("3");
-            MyComboBox.Items.Add("4");
-            MyComboBox.Items.Add("5");
+            MyComboBox.Items.Add("Horrible");
+            MyComboBox.Items.Add("Bad");
+            MyComboBox.Items.Add("Alright");
+            MyComboBox.Items.Add("Good");
+            MyComboBox.Items.Add("Excellent");
             panelForm.Controls.Add(MyComboBox);
 
             textBox++; 
@@ -112,6 +112,9 @@ namespace AppDev_CW_dNF
             List<string> data = new List<string>();
             bool err = false;
 
+            string score = "";
+            string point = "";
+
             // Getting data from textBox
             foreach (TextBox textBox in textBoxList)
             {
@@ -125,7 +128,23 @@ namespace AppDev_CW_dNF
                 {
                     err = true;
                 }
-                data.Add(comboBox.Text);
+                score = comboBox.Text;
+                if (score.Equals("Excellent")) {
+                    point = "5";
+                } else if (score.Equals("Good"))
+                {
+                    point = "4";
+                } else if (score.Equals("Alright"))
+                {
+                    point = "3";
+                } else if (score.Equals("Bad"))
+                {
+                    point = "2";
+                } else if (score.Equals("Horrible"))
+                {
+                    point = "1";
+                }
+                data.Add(point);
             }
 
             if (err)
