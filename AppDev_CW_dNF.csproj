@@ -123,6 +123,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="README.md" />
+    <None Include="reviews-backup.csv" />
     <None Include="reviews.csv" />
   </ItemGroup>
   <ItemGroup>
