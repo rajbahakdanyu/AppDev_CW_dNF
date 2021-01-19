@@ -12,34 +12,16 @@ namespace AppDev_CW_dNF
 {
     public partial class Landing : Form
     {
+        Utils util = new Utils();
+
         public Landing()
         {
             InitializeComponent();
         }
 
-        private Form activeForm = null; // Setting current form
-
-        private void openChildForm(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-
-            activeForm = childForm;
-
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-
-            panelContent.Controls.Add(childForm);
-            panelContent.Tag = childForm;
-
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
         private void btnGive_Click(object sender, EventArgs e)
         {
-            openChildForm(new Review_Form());
+            util.openChildForm(panelContent, new Review_Form());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

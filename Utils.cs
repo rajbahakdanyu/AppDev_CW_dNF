@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AppDev_CW_dNF
 {
@@ -49,6 +50,27 @@ namespace AppDev_CW_dNF
             }
 
             return values;
+        }
+
+        public Form activeForm = null; // Setting current form
+
+        // Open Child form in current frame
+        public void openChildForm(Panel parentPanel, Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+
+            activeForm = childForm;
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            parentPanel.Controls.Add(childForm);
+            parentPanel.Tag = childForm;
+
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

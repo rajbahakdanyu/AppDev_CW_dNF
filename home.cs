@@ -12,39 +12,21 @@ namespace AppDev_CW_dNF
 {
     public partial class mainFrame : Form
     {
+        Utils util = new Utils();
+
         public mainFrame()
         {
             InitializeComponent();
         }
 
-        private Form activeForm = null; // Setting current form
-
-        private void openChildForm(Form childForm)
-        {
-            if (activeForm != null)
-                activeForm.Close();
-
-            activeForm = childForm;
-
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-
-            panelMain.Controls.Add(childForm);
-            panelMain.Tag = childForm;
-
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            openChildForm(new Edit_Form());
+            util.openChildForm(panelMain, new Edit_Form());
         }
 
         private void btnshow_Click(object sender, EventArgs e)
         {
-            openChildForm(new Review());
+            util.openChildForm(panelMain, new Review());
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -57,7 +39,7 @@ namespace AppDev_CW_dNF
 
         private void btnSee_Click(object sender, EventArgs e)
         {
-            openChildForm(new See_Reviews());
+            util.openChildForm(panelMain, new See_Reviews());
         }
     }
 }
